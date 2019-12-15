@@ -1,0 +1,998 @@
+
+adc.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000606  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .bss          00000009  00800200  00800200  0000067a  2**0
+                  ALLOC
+  2 .stab         000006e4  00000000  00000000  0000067c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  3 .stabstr      00000085  00000000  00000000  00000d60  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_aranges 00000080  00000000  00000000  00000de8  2**3
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00000615  00000000  00000000  00000e68  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 00000171  00000000  00000000  0000147d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   000003d1  00000000  00000000  000015ee  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  000001a4  00000000  00000000  000019c0  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    000001eb  00000000  00000000  00001b64  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    00000087  00000000  00000000  00001d4f  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 72 00 	jmp	0xe4	; 0xe4 <__ctors_end>
+   4:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+   8:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+   c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  10:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  14:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  18:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  1c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  20:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  24:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  28:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  2c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  30:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  34:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  38:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  3c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  40:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  44:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  48:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  4c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  50:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  54:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  58:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  5c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  60:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  64:	0c 94 e7 00 	jmp	0x1ce	; 0x1ce <__vector_25>
+  68:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  6c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  70:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  74:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  78:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  7c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  80:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  84:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  88:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  8c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  90:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  94:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  98:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  9c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  a0:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  a4:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  a8:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  ac:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  b0:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  b4:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  b8:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  bc:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  c0:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  c4:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  c8:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  cc:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  d0:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  d4:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  d8:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  dc:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+  e0:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+
+000000e4 <__ctors_end>:
+  e4:	11 24       	eor	r1, r1
+  e6:	1f be       	out	0x3f, r1	; 63
+  e8:	cf ef       	ldi	r28, 0xFF	; 255
+  ea:	d1 e2       	ldi	r29, 0x21	; 33
+  ec:	de bf       	out	0x3e, r29	; 62
+  ee:	cd bf       	out	0x3d, r28	; 61
+  f0:	00 e0       	ldi	r16, 0x00	; 0
+  f2:	0c bf       	out	0x3c, r16	; 60
+
+000000f4 <__do_copy_data>:
+  f4:	12 e0       	ldi	r17, 0x02	; 2
+  f6:	a0 e0       	ldi	r26, 0x00	; 0
+  f8:	b2 e0       	ldi	r27, 0x02	; 2
+  fa:	e6 e0       	ldi	r30, 0x06	; 6
+  fc:	f6 e0       	ldi	r31, 0x06	; 6
+  fe:	00 e0       	ldi	r16, 0x00	; 0
+ 100:	0b bf       	out	0x3b, r16	; 59
+ 102:	02 c0       	rjmp	.+4      	; 0x108 <__do_copy_data+0x14>
+ 104:	07 90       	elpm	r0, Z+
+ 106:	0d 92       	st	X+, r0
+ 108:	a0 30       	cpi	r26, 0x00	; 0
+ 10a:	b1 07       	cpc	r27, r17
+ 10c:	d9 f7       	brne	.-10     	; 0x104 <__do_copy_data+0x10>
+
+0000010e <__do_clear_bss>:
+ 10e:	12 e0       	ldi	r17, 0x02	; 2
+ 110:	a0 e0       	ldi	r26, 0x00	; 0
+ 112:	b2 e0       	ldi	r27, 0x02	; 2
+ 114:	01 c0       	rjmp	.+2      	; 0x118 <.do_clear_bss_start>
+
+00000116 <.do_clear_bss_loop>:
+ 116:	1d 92       	st	X+, r1
+
+00000118 <.do_clear_bss_start>:
+ 118:	a9 30       	cpi	r26, 0x09	; 9
+ 11a:	b1 07       	cpc	r27, r17
+ 11c:	e1 f7       	brne	.-8      	; 0x116 <.do_clear_bss_loop>
+ 11e:	0e 94 34 01 	call	0x268	; 0x268 <main>
+ 122:	0c 94 01 03 	jmp	0x602	; 0x602 <_exit>
+
+00000126 <__bad_interrupt>:
+ 126:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+0000012a <magnet_pin_config>:
+#define RE  (1<<7)
+
+
+void magnet_pin_config()
+{
+	DDRH = 0xff ; 	// Turning pins of Port H as output pins
+ 12a:	8f ef       	ldi	r24, 0xFF	; 255
+ 12c:	80 93 01 01 	sts	0x0101, r24
+	PORTH = 0 ;    // Giving low(0) output from Pins in Port H
+ 130:	10 92 02 01 	sts	0x0102, r1
+}
+ 134:	08 95       	ret
+
+00000136 <buzzer_pin_config>:
+
+void buzzer_pin_config()
+{
+	DDRB = 0xff;
+ 136:	8f ef       	ldi	r24, 0xFF	; 255
+ 138:	84 b9       	out	0x04, r24	; 4
+	PORTB = 0;	
+ 13a:	15 b8       	out	0x05, r1	; 5
+} 
+ 13c:	08 95       	ret
+
+0000013e <motor_pin_config>:
+
+void motor_pin_config()
+{
+	DDRA = 0xff ;  // Turning pins of Port A as output pins
+ 13e:	8f ef       	ldi	r24, 0xFF	; 255
+ 140:	81 b9       	out	0x01, r24	; 1
+	PORTA = 0 ;   // Giving low(0) output from Pins in Port A
+ 142:	12 b8       	out	0x02, r1	; 2
+}
+ 144:	08 95       	ret
+
+00000146 <magnet_on>:
+
+
+void magnet_on()
+{
+	PORTH = 0x01 ; //Turning the output of porth0 as 1 to turn on manget
+ 146:	81 e0       	ldi	r24, 0x01	; 1
+ 148:	80 93 02 01 	sts	0x0102, r24
+}
+ 14c:	08 95       	ret
+
+0000014e <magnet_off>:
+
+void magnet_off()
+{
+	PORTH = 0 ;  //Turning the output of porth0 as 0 to turn off manget
+ 14e:	10 92 02 01 	sts	0x0102, r1
+}
+ 152:	08 95       	ret
+
+00000154 <backward>:
+
+void backward()
+{
+	PORTA =0x05  ; //Turning on porta0 and porta2 on to move motors backwards (0000 0101)
+ 154:	85 e0       	ldi	r24, 0x05	; 5
+ 156:	82 b9       	out	0x02, r24	; 2
+}
+ 158:	08 95       	ret
+
+0000015a <forward>:
+
+void forward()
+{
+	PORTA = 0x0a; //Turning on porta1 and porta3 on to move motors forward (0000 1010)
+ 15a:	8a e0       	ldi	r24, 0x0A	; 10
+ 15c:	82 b9       	out	0x02, r24	; 2
+}
+ 15e:	08 95       	ret
+
+00000160 <left>:
+
+void left()
+{
+	PORTA = 0x09; //Turning on porta0 and porta3 on to move motors left (0000 1001)
+ 160:	89 e0       	ldi	r24, 0x09	; 9
+ 162:	82 b9       	out	0x02, r24	; 2
+}
+ 164:	08 95       	ret
+
+00000166 <right>:
+
+void right()
+{
+	PORTA = 0x06;//Turning on porta1 and porta2 on to move motors right (0000 0110)
+ 166:	86 e0       	ldi	r24, 0x06	; 6
+ 168:	82 b9       	out	0x02, r24	; 2
+}
+ 16a:	08 95       	ret
+
+0000016c <soft_left>:
+
+void soft_left()
+{
+	PORTA = 0x08;//Turning on porta3 on to move motors soft left (0000 1000)
+ 16c:	88 e0       	ldi	r24, 0x08	; 8
+ 16e:	82 b9       	out	0x02, r24	; 2
+}
+ 170:	08 95       	ret
+
+00000172 <soft_right>:
+
+void soft_right()
+{
+	PORTA = 0x02; //Turning on porta1 on to move motors soft right (0000 0010)
+ 172:	82 e0       	ldi	r24, 0x02	; 2
+ 174:	82 b9       	out	0x02, r24	; 2
+}
+ 176:	08 95       	ret
+
+00000178 <stop>:
+
+void stop()
+{
+	PORTA = 0 ;//Stopping motors by setting output as 0
+ 178:	12 b8       	out	0x02, r1	; 2
+}
+ 17a:	08 95       	ret
+
+0000017c <buzzer_on>:
+
+void buzzer_on()
+{
+	PORTB=0xff;	
+ 17c:	8f ef       	ldi	r24, 0xFF	; 255
+ 17e:	85 b9       	out	0x05, r24	; 5
+}
+ 180:	08 95       	ret
+
+00000182 <buzzer_off>:
+
+void buzzer_off()
+{
+	PORTB=0;
+ 182:	15 b8       	out	0x05, r1	; 5
+}
+ 184:	08 95       	ret
+
+00000186 <uart0_init>:
+unsigned char Front_Sharp_Sensor=0;
+unsigned char Front_IR_Sensor=0;
+
+void uart0_init()
+{
+	UCSR0B = 0x00;							//disable while setting baud rate
+ 186:	e1 ec       	ldi	r30, 0xC1	; 193
+ 188:	f0 e0       	ldi	r31, 0x00	; 0
+ 18a:	10 82       	st	Z, r1
+	UCSR0A = 0x00;
+ 18c:	10 92 c0 00 	sts	0x00C0, r1
+	UCSR0C = 0x06;
+ 190:	a2 ec       	ldi	r26, 0xC2	; 194
+ 192:	b0 e0       	ldi	r27, 0x00	; 0
+ 194:	86 e0       	ldi	r24, 0x06	; 6
+ 196:	8c 93       	st	X, r24
+	UBRR0L = 0x5F; 							//9600BPS at 14745600Hz
+ 198:	9f e5       	ldi	r25, 0x5F	; 95
+ 19a:	90 93 c4 00 	sts	0x00C4, r25
+	UBRR0H = 0x00;
+ 19e:	10 92 c5 00 	sts	0x00C5, r1
+	UCSR0B = 0x98;
+ 1a2:	98 e9       	ldi	r25, 0x98	; 152
+ 1a4:	90 83       	st	Z, r25
+	UCSR0C = 3<<1;							//setting 8-bit character and 1 stop bit
+ 1a6:	8c 93       	st	X, r24
+	UCSR0B = RX | TX;
+ 1a8:	88 e1       	ldi	r24, 0x18	; 24
+ 1aa:	80 83       	st	Z, r24
+}
+ 1ac:	08 95       	ret
+
+000001ae <uart_tx>:
+
+void uart_tx(char data)
+{
+	while(!(UCSR0A & TE));						//waiting to transmit
+ 1ae:	e0 ec       	ldi	r30, 0xC0	; 192
+ 1b0:	f0 e0       	ldi	r31, 0x00	; 0
+ 1b2:	90 81       	ld	r25, Z
+ 1b4:	95 ff       	sbrs	r25, 5
+ 1b6:	fd cf       	rjmp	.-6      	; 0x1b2 <uart_tx+0x4>
+	UDR0 = data;
+ 1b8:	80 93 c6 00 	sts	0x00C6, r24
+}
+ 1bc:	08 95       	ret
+
+000001be <uart_rx>:
+
+unsigned char uart_rx()
+{
+	while(!(UCSR0A & RE));						//waiting to receive
+ 1be:	e0 ec       	ldi	r30, 0xC0	; 192
+ 1c0:	f0 e0       	ldi	r31, 0x00	; 0
+ 1c2:	80 81       	ld	r24, Z
+ 1c4:	88 23       	and	r24, r24
+ 1c6:	ec f7       	brge	.-6      	; 0x1c2 <uart_rx+0x4>
+	return UDR0;
+ 1c8:	80 91 c6 00 	lds	r24, 0x00C6
+}
+ 1cc:	08 95       	ret
+
+000001ce <__vector_25>:
+
+
+ISR(USART0_RX_vect)
+{
+ 1ce:	1f 92       	push	r1
+ 1d0:	0f 92       	push	r0
+ 1d2:	0f b6       	in	r0, 0x3f	; 63
+ 1d4:	0f 92       	push	r0
+ 1d6:	11 24       	eor	r1, r1
+ 1d8:	8f 93       	push	r24
+	data = UDR0;
+ 1da:	80 91 c6 00 	lds	r24, 0x00C6
+ 1de:	80 93 08 02 	sts	0x0208, r24
+}
+ 1e2:	8f 91       	pop	r24
+ 1e4:	0f 90       	pop	r0
+ 1e6:	0f be       	out	0x3f, r0	; 63
+ 1e8:	0f 90       	pop	r0
+ 1ea:	1f 90       	pop	r1
+ 1ec:	18 95       	reti
+
+000001ee <adc_pin_config>:
+void adc_pin_config (void)
+{
+ DDRF = 0x00; 
+ 1ee:	10 ba       	out	0x10, r1	; 16
+ PORTF = 0x00;
+ 1f0:	11 ba       	out	0x11, r1	; 17
+}
+ 1f2:	08 95       	ret
+
+000001f4 <port_init>:
+
+void port_init()
+{
+	adc_pin_config();
+ 1f4:	0e 94 f7 00 	call	0x1ee	; 0x1ee <adc_pin_config>
+	uart0_init();
+ 1f8:	0e 94 c3 00 	call	0x186	; 0x186 <uart0_init>
+	motor_pin_config();
+ 1fc:	0e 94 9f 00 	call	0x13e	; 0x13e <motor_pin_config>
+	magnet_pin_config();
+ 200:	0e 94 95 00 	call	0x12a	; 0x12a <magnet_pin_config>
+	buzzer_pin_config();
+ 204:	0e 94 9b 00 	call	0x136	; 0x136 <buzzer_pin_config>
+}
+ 208:	08 95       	ret
+
+0000020a <adc_init>:
+
+
+void adc_init()
+{
+	ADCSRA = 0x00;
+ 20a:	ea e7       	ldi	r30, 0x7A	; 122
+ 20c:	f0 e0       	ldi	r31, 0x00	; 0
+ 20e:	10 82       	st	Z, r1
+	ADCSRB = 0x00;		//MUX5 = 0
+ 210:	10 92 7b 00 	sts	0x007B, r1
+	ADMUX = 0x20;		//Vref=5V external --- ADLAR=1 --- MUX4:0 = 0000
+ 214:	80 e2       	ldi	r24, 0x20	; 32
+ 216:	80 93 7c 00 	sts	0x007C, r24
+	ACSR = 0x80;
+ 21a:	80 e8       	ldi	r24, 0x80	; 128
+ 21c:	80 bf       	out	0x30, r24	; 48
+	ADCSRA = 0x86;		//ADEN=1 --- ADIE=1 --- ADPS2:0 = 1 1 0
+ 21e:	86 e8       	ldi	r24, 0x86	; 134
+ 220:	80 83       	st	Z, r24
+}
+ 222:	08 95       	ret
+
+00000224 <ADC_Conversion>:
+
+//Function For ADC Conversion
+unsigned char ADC_Conversion(unsigned char Ch) 
+{
+	unsigned char a;
+	if(Ch>7)
+ 224:	88 30       	cpi	r24, 0x08	; 8
+ 226:	18 f0       	brcs	.+6      	; 0x22e <ADC_Conversion+0xa>
+	{
+		ADCSRB = 0x08;
+ 228:	98 e0       	ldi	r25, 0x08	; 8
+ 22a:	90 93 7b 00 	sts	0x007B, r25
+	}
+	Ch = Ch & 0x07;  			
+ 22e:	87 70       	andi	r24, 0x07	; 7
+	ADMUX= 0x20| Ch;	   		
+ 230:	80 62       	ori	r24, 0x20	; 32
+ 232:	80 93 7c 00 	sts	0x007C, r24
+	ADCSRA = ADCSRA | 0x40;		//Set start conversion bit
+ 236:	ea e7       	ldi	r30, 0x7A	; 122
+ 238:	f0 e0       	ldi	r31, 0x00	; 0
+ 23a:	80 81       	ld	r24, Z
+ 23c:	80 64       	ori	r24, 0x40	; 64
+ 23e:	80 83       	st	Z, r24
+	while((ADCSRA&0x10)==0);	//Wait for conversion to complete
+ 240:	80 81       	ld	r24, Z
+ 242:	84 ff       	sbrs	r24, 4
+ 244:	fd cf       	rjmp	.-6      	; 0x240 <ADC_Conversion+0x1c>
+	a=ADCH;
+ 246:	80 91 79 00 	lds	r24, 0x0079
+	ADCSRA = ADCSRA|0x10; //clear ADIF (ADC Interrupt Flag) by writing 1 to it
+ 24a:	ea e7       	ldi	r30, 0x7A	; 122
+ 24c:	f0 e0       	ldi	r31, 0x00	; 0
+ 24e:	90 81       	ld	r25, Z
+ 250:	90 61       	ori	r25, 0x10	; 16
+ 252:	90 83       	st	Z, r25
+	ADCSRB = 0x00;
+ 254:	10 92 7b 00 	sts	0x007B, r1
+	return a;
+}
+ 258:	08 95       	ret
+
+0000025a <init_devices>:
+
+void init_devices (void)
+{
+ 	cli(); //Clears the global interrupts
+ 25a:	f8 94       	cli
+	port_init();
+ 25c:	0e 94 fa 00 	call	0x1f4	; 0x1f4 <port_init>
+	adc_init();
+ 260:	0e 94 05 01 	call	0x20a	; 0x20a <adc_init>
+	sei();   //Enables the global interrupts
+ 264:	78 94       	sei
+}
+ 266:	08 95       	ret
+
+00000268 <main>:
+
+int main()
+{
+	init_devices();
+ 268:	0e 94 2d 01 	call	0x25a	; 0x25a <init_devices>
+	char a=' ';
+	while(1)
+	{
+		a=uart_rx();
+ 26c:	0e 94 df 00 	call	0x1be	; 0x1be <uart_rx>
+ 270:	c8 2f       	mov	r28, r24
+		Left_white_line = ADC_Conversion(1);	//Getting data of Left WL Sensor
+ 272:	81 e0       	ldi	r24, 0x01	; 1
+ 274:	0e 94 12 01 	call	0x224	; 0x224 <ADC_Conversion>
+ 278:	80 93 04 02 	sts	0x0204, r24
+		Center_white_line = ADC_Conversion(2);	//Getting data of Center WL Sensor
+ 27c:	82 e0       	ldi	r24, 0x02	; 2
+ 27e:	0e 94 12 01 	call	0x224	; 0x224 <ADC_Conversion>
+ 282:	80 93 03 02 	sts	0x0203, r24
+		Right_white_line = ADC_Conversion(3);	//Getting data of Right WL Sensor
+ 286:	83 e0       	ldi	r24, 0x03	; 3
+ 288:	0e 94 12 01 	call	0x224	; 0x224 <ADC_Conversion>
+ 28c:	80 93 02 02 	sts	0x0202, r24
+		switch (a)
+ 290:	ce 36       	cpi	r28, 0x6E	; 110
+ 292:	79 f1       	breq	.+94     	; 0x2f2 <main+0x8a>
+ 294:	cf 36       	cpi	r28, 0x6F	; 111
+ 296:	a0 f4       	brcc	.+40     	; 0x2c0 <main+0x58>
+ 298:	c4 36       	cpi	r28, 0x64	; 100
+ 29a:	09 f4       	brne	.+2      	; 0x29e <main+0x36>
+ 29c:	53 c1       	rjmp	.+678    	; 0x544 <main+0x2dc>
+ 29e:	c5 36       	cpi	r28, 0x65	; 101
+ 2a0:	38 f4       	brcc	.+14     	; 0x2b0 <main+0x48>
+ 2a2:	c1 36       	cpi	r28, 0x61	; 97
+ 2a4:	09 f4       	brne	.+2      	; 0x2a8 <main+0x40>
+ 2a6:	ef c0       	rjmp	.+478    	; 0x486 <main+0x21e>
+ 2a8:	c2 36       	cpi	r28, 0x62	; 98
+ 2aa:	09 f0       	breq	.+2      	; 0x2ae <main+0x46>
+ 2ac:	a7 c1       	rjmp	.+846    	; 0x5fc <main+0x394>
+ 2ae:	1e c0       	rjmp	.+60     	; 0x2ec <main+0x84>
+ 2b0:	cb 36       	cpi	r28, 0x6B	; 107
+ 2b2:	89 f1       	breq	.+98     	; 0x316 <main+0xae>
+ 2b4:	cd 36       	cpi	r28, 0x6D	; 109
+ 2b6:	01 f1       	breq	.+64     	; 0x2f8 <main+0x90>
+ 2b8:	c6 36       	cpi	r28, 0x66	; 102
+ 2ba:	09 f0       	breq	.+2      	; 0x2be <main+0x56>
+ 2bc:	9f c1       	rjmp	.+830    	; 0x5fc <main+0x394>
+ 2be:	3f c1       	rjmp	.+638    	; 0x53e <main+0x2d6>
+ 2c0:	c5 37       	cpi	r28, 0x75	; 117
+ 2c2:	19 f1       	breq	.+70     	; 0x30a <main+0xa2>
+ 2c4:	c6 37       	cpi	r28, 0x76	; 118
+ 2c6:	50 f4       	brcc	.+20     	; 0x2dc <main+0x74>
+ 2c8:	c2 37       	cpi	r28, 0x72	; 114
+ 2ca:	09 f4       	brne	.+2      	; 0x2ce <main+0x66>
+ 2cc:	79 c1       	rjmp	.+754    	; 0x5c0 <main+0x358>
+ 2ce:	c3 37       	cpi	r28, 0x73	; 115
+ 2d0:	09 f4       	brne	.+2      	; 0x2d4 <main+0x6c>
+ 2d2:	17 c1       	rjmp	.+558    	; 0x502 <main+0x29a>
+ 2d4:	cf 36       	cpi	r28, 0x6F	; 111
+ 2d6:	09 f0       	breq	.+2      	; 0x2da <main+0x72>
+ 2d8:	91 c1       	rjmp	.+802    	; 0x5fc <main+0x394>
+ 2da:	11 c0       	rjmp	.+34     	; 0x2fe <main+0x96>
+ 2dc:	c9 37       	cpi	r28, 0x79	; 121
+ 2de:	91 f0       	breq	.+36     	; 0x304 <main+0x9c>
+ 2e0:	ca 37       	cpi	r28, 0x7A	; 122
+ 2e2:	b1 f0       	breq	.+44     	; 0x310 <main+0xa8>
+ 2e4:	c7 37       	cpi	r28, 0x77	; 119
+ 2e6:	09 f0       	breq	.+2      	; 0x2ea <main+0x82>
+ 2e8:	89 c1       	rjmp	.+786    	; 0x5fc <main+0x394>
+ 2ea:	33 c0       	rjmp	.+102    	; 0x352 <main+0xea>
+		{
+			case 'b':buzzer_on();
+ 2ec:	0e 94 be 00 	call	0x17c	; 0x17c <buzzer_on>
+					 break;
+ 2f0:	bd cf       	rjmp	.-134    	; 0x26c <main+0x4>
+			case 'n':buzzer_off();
+ 2f2:	0e 94 c1 00 	call	0x182	; 0x182 <buzzer_off>
+					 break;
+ 2f6:	ba cf       	rjmp	.-140    	; 0x26c <main+0x4>
+			case 'm':magnet_on();
+ 2f8:	0e 94 a3 00 	call	0x146	; 0x146 <magnet_on>
+					 break;
+ 2fc:	b7 cf       	rjmp	.-146    	; 0x26c <main+0x4>
+			case 'o':magnet_off();
+ 2fe:	0e 94 a7 00 	call	0x14e	; 0x14e <magnet_off>
+					 break;
+ 302:	b4 cf       	rjmp	.-152    	; 0x26c <main+0x4>
+			case 'y':left();
+ 304:	0e 94 b0 00 	call	0x160	; 0x160 <left>
+					break;
+ 308:	b1 cf       	rjmp	.-158    	; 0x26c <main+0x4>
+			case 'u':right();
+ 30a:	0e 94 b3 00 	call	0x166	; 0x166 <right>
+					 break;
+ 30e:	ae cf       	rjmp	.-164    	; 0x26c <main+0x4>
+			case 'z':backward();
+ 310:	0e 94 aa 00 	call	0x154	; 0x154 <backward>
+					break;
+ 314:	ab cf       	rjmp	.-170    	; 0x26c <main+0x4>
+			case 'k':left();
+ 316:	0e 94 b0 00 	call	0x160	; 0x160 <left>
+					 while(1)
+					 {
+						Left_white_line = ADC_Conversion(1);	//Getting data of Left WL Sensor
+ 31a:	81 e0       	ldi	r24, 0x01	; 1
+ 31c:	0e 94 12 01 	call	0x224	; 0x224 <ADC_Conversion>
+ 320:	80 93 04 02 	sts	0x0204, r24
+						Center_white_line = ADC_Conversion(2);	//Getting data of Center WL Sensor
+ 324:	82 e0       	ldi	r24, 0x02	; 2
+ 326:	0e 94 12 01 	call	0x224	; 0x224 <ADC_Conversion>
+ 32a:	80 93 03 02 	sts	0x0203, r24
+						Right_white_line = ADC_Conversion(3);	//Getting data of Right WL Sensor
+ 32e:	83 e0       	ldi	r24, 0x03	; 3
+ 330:	0e 94 12 01 	call	0x224	; 0x224 <ADC_Conversion>
+ 334:	80 93 02 02 	sts	0x0202, r24
+						if(Left_white_line<200 && Center_white_line<200 && Right_white_line<200)
+ 338:	90 91 04 02 	lds	r25, 0x0204
+ 33c:	98 3c       	cpi	r25, 0xC8	; 200
+ 33e:	68 f7       	brcc	.-38     	; 0x31a <main+0xb2>
+ 340:	90 91 03 02 	lds	r25, 0x0203
+ 344:	98 3c       	cpi	r25, 0xC8	; 200
+ 346:	48 f7       	brcc	.-46     	; 0x31a <main+0xb2>
+ 348:	88 3c       	cpi	r24, 0xC8	; 200
+ 34a:	38 f7       	brcc	.-50     	; 0x31a <main+0xb2>
+						{
+							stop();
+ 34c:	0e 94 bc 00 	call	0x178	; 0x178 <stop>
+							break;
+						}
+					 }
+					 break;
+ 350:	8d cf       	rjmp	.-230    	; 0x26c <main+0x4>
+			case 'w':forward();
+ 352:	0e 94 ad 00 	call	0x15a	; 0x15a <forward>
+					while(1)
+					 {
+						 Left_white_line = ADC_Conversion(1);	//Gettinwwg data of Left WL Sensor
+ 356:	81 e0       	ldi	r24, 0x01	; 1
+ 358:	0e 94 12 01 	call	0x224	; 0x224 <ADC_Conversion>
+ 35c:	80 93 04 02 	sts	0x0204, r24
+						 Center_white_line = ADC_Conversion(2);	//Getting data of Center WL Sensor
+ 360:	82 e0       	ldi	r24, 0x02	; 2
+ 362:	0e 94 12 01 	call	0x224	; 0x224 <ADC_Conversion>
+ 366:	80 93 03 02 	sts	0x0203, r24
+						 Right_white_line = ADC_Conversion(3);	//Getting data of Right WL Sensor
+ 36a:	83 e0       	ldi	r24, 0x03	; 3
+ 36c:	0e 94 12 01 	call	0x224	; 0x224 <ADC_Conversion>
+ 370:	80 93 02 02 	sts	0x0202, r24
+						 
+						if(Left_white_line>200 && Center_white_line<200 && Right_white_line<200)
+ 374:	90 91 04 02 	lds	r25, 0x0204
+ 378:	99 3c       	cpi	r25, 0xC9	; 201
+ 37a:	b8 f0       	brcs	.+46     	; 0x3aa <main+0x142>
+ 37c:	20 91 03 02 	lds	r18, 0x0203
+ 380:	28 3c       	cpi	r18, 0xC8	; 200
+ 382:	98 f4       	brcc	.+38     	; 0x3aa <main+0x142>
+ 384:	88 3c       	cpi	r24, 0xC8	; 200
+ 386:	88 f4       	brcc	.+34     	; 0x3aa <main+0x142>
+						{
+							soft_left();
+ 388:	0e 94 b6 00 	call	0x16c	; 0x16c <soft_left>
+							if(Left_white_line<200 && Center_white_line>200 && Right_white_line<200)
+ 38c:	80 91 04 02 	lds	r24, 0x0204
+ 390:	88 3c       	cpi	r24, 0xC8	; 200
+ 392:	08 f7       	brcc	.-62     	; 0x356 <main+0xee>
+ 394:	80 91 03 02 	lds	r24, 0x0203
+ 398:	89 3c       	cpi	r24, 0xC9	; 201
+ 39a:	e8 f2       	brcs	.-70     	; 0x356 <main+0xee>
+ 39c:	80 91 02 02 	lds	r24, 0x0202
+ 3a0:	88 3c       	cpi	r24, 0xC8	; 200
+ 3a2:	c8 f6       	brcc	.-78     	; 0x356 <main+0xee>
+							{
+								forward();								
+ 3a4:	0e 94 ad 00 	call	0x15a	; 0x15a <forward>
+ 3a8:	d6 cf       	rjmp	.-84     	; 0x356 <main+0xee>
+							}
+					
+						}	 
+						else if(Left_white_line<200 && Center_white_line<200 && Right_white_line>200)
+ 3aa:	98 3c       	cpi	r25, 0xC8	; 200
+ 3ac:	c0 f4       	brcc	.+48     	; 0x3de <main+0x176>
+ 3ae:	20 91 03 02 	lds	r18, 0x0203
+ 3b2:	28 3c       	cpi	r18, 0xC8	; 200
+ 3b4:	a0 f4       	brcc	.+40     	; 0x3de <main+0x176>
+ 3b6:	89 3c       	cpi	r24, 0xC9	; 201
+ 3b8:	90 f0       	brcs	.+36     	; 0x3de <main+0x176>
+						{
+							soft_right();
+ 3ba:	0e 94 b9 00 	call	0x172	; 0x172 <soft_right>
+							if(Left_white_line<200 && Center_white_line>200 && Right_white_line<200)
+ 3be:	80 91 04 02 	lds	r24, 0x0204
+ 3c2:	88 3c       	cpi	r24, 0xC8	; 200
+ 3c4:	40 f6       	brcc	.-112    	; 0x356 <main+0xee>
+ 3c6:	80 91 03 02 	lds	r24, 0x0203
+ 3ca:	89 3c       	cpi	r24, 0xC9	; 201
+ 3cc:	20 f2       	brcs	.-120    	; 0x356 <main+0xee>
+ 3ce:	80 91 02 02 	lds	r24, 0x0202
+ 3d2:	88 3c       	cpi	r24, 0xC8	; 200
+ 3d4:	08 f0       	brcs	.+2      	; 0x3d8 <main+0x170>
+ 3d6:	bf cf       	rjmp	.-130    	; 0x356 <main+0xee>
+							{
+								forward();
+ 3d8:	0e 94 ad 00 	call	0x15a	; 0x15a <forward>
+ 3dc:	bc cf       	rjmp	.-136    	; 0x356 <main+0xee>
+							}
+							
+						}
+						else if(Left_white_line>200 && Center_white_line>200 && Right_white_line>200)
+ 3de:	99 3c       	cpi	r25, 0xC9	; 201
+ 3e0:	60 f0       	brcs	.+24     	; 0x3fa <main+0x192>
+ 3e2:	20 91 03 02 	lds	r18, 0x0203
+ 3e6:	29 3c       	cpi	r18, 0xC9	; 201
+ 3e8:	40 f0       	brcs	.+16     	; 0x3fa <main+0x192>
+ 3ea:	89 3c       	cpi	r24, 0xC9	; 201
+ 3ec:	30 f0       	brcs	.+12     	; 0x3fa <main+0x192>
+						{
+							stop();
+ 3ee:	0e 94 bc 00 	call	0x178	; 0x178 <stop>
+							uart_tx('o');
+ 3f2:	8f e6       	ldi	r24, 0x6F	; 111
+ 3f4:	0e 94 d7 00 	call	0x1ae	; 0x1ae <uart_tx>
+							{
+								forward();
+							}
+						}							
+					 }	
+					 break;
+ 3f8:	39 cf       	rjmp	.-398    	; 0x26c <main+0x4>
+						{
+							stop();
+							uart_tx('o');
+							break;
+						}							
+						else if(Left_white_line<200 && Center_white_line>200 && Right_white_line<200)
+ 3fa:	98 3c       	cpi	r25, 0xC8	; 200
+ 3fc:	48 f4       	brcc	.+18     	; 0x410 <main+0x1a8>
+ 3fe:	20 91 03 02 	lds	r18, 0x0203
+ 402:	29 3c       	cpi	r18, 0xC9	; 201
+ 404:	28 f0       	brcs	.+10     	; 0x410 <main+0x1a8>
+ 406:	88 3c       	cpi	r24, 0xC8	; 200
+ 408:	18 f4       	brcc	.+6      	; 0x410 <main+0x1a8>
+						{
+							forward();
+ 40a:	0e 94 ad 00 	call	0x15a	; 0x15a <forward>
+ 40e:	a3 cf       	rjmp	.-186    	; 0x356 <main+0xee>
+						}
+						else if(Left_white_line>200 &&Center_white_line>200 && Right_white_line<200)
+ 410:	99 3c       	cpi	r25, 0xC9	; 201
+ 412:	d0 f0       	brcs	.+52     	; 0x448 <main+0x1e0>
+ 414:	20 91 03 02 	lds	r18, 0x0203
+ 418:	29 3c       	cpi	r18, 0xC9	; 201
+ 41a:	b0 f0       	brcs	.+44     	; 0x448 <main+0x1e0>
+ 41c:	88 3c       	cpi	r24, 0xC8	; 200
+ 41e:	a0 f4       	brcc	.+40     	; 0x448 <main+0x1e0>
+						{
+							soft_left();
+ 420:	0e 94 b6 00 	call	0x16c	; 0x16c <soft_left>
+							if(Left_white_line<200 && Center_white_line>200 && Right_white_line<200)
+ 424:	80 91 04 02 	lds	r24, 0x0204
+ 428:	88 3c       	cpi	r24, 0xC8	; 200
+ 42a:	08 f0       	brcs	.+2      	; 0x42e <main+0x1c6>
+ 42c:	94 cf       	rjmp	.-216    	; 0x356 <main+0xee>
+ 42e:	80 91 03 02 	lds	r24, 0x0203
+ 432:	89 3c       	cpi	r24, 0xC9	; 201
+ 434:	08 f4       	brcc	.+2      	; 0x438 <main+0x1d0>
+ 436:	8f cf       	rjmp	.-226    	; 0x356 <main+0xee>
+ 438:	80 91 02 02 	lds	r24, 0x0202
+ 43c:	88 3c       	cpi	r24, 0xC8	; 200
+ 43e:	08 f0       	brcs	.+2      	; 0x442 <main+0x1da>
+ 440:	8a cf       	rjmp	.-236    	; 0x356 <main+0xee>
+							{
+								forward();
+ 442:	0e 94 ad 00 	call	0x15a	; 0x15a <forward>
+ 446:	87 cf       	rjmp	.-242    	; 0x356 <main+0xee>
+							}
+						}
+						else if(Left_white_line<200 &&Center_white_line>200 && Right_white_line>200)
+ 448:	98 3c       	cpi	r25, 0xC8	; 200
+ 44a:	08 f0       	brcs	.+2      	; 0x44e <main+0x1e6>
+ 44c:	84 cf       	rjmp	.-248    	; 0x356 <main+0xee>
+ 44e:	90 91 03 02 	lds	r25, 0x0203
+ 452:	99 3c       	cpi	r25, 0xC9	; 201
+ 454:	08 f4       	brcc	.+2      	; 0x458 <main+0x1f0>
+ 456:	7f cf       	rjmp	.-258    	; 0x356 <main+0xee>
+ 458:	89 3c       	cpi	r24, 0xC9	; 201
+ 45a:	08 f4       	brcc	.+2      	; 0x45e <main+0x1f6>
+ 45c:	7c cf       	rjmp	.-264    	; 0x356 <main+0xee>
+						{
+							soft_right();
+ 45e:	0e 94 b9 00 	call	0x172	; 0x172 <soft_right>
+							if(Left_white_line<200 && Center_white_line>200 && Right_white_line<200)
+ 462:	80 91 04 02 	lds	r24, 0x0204
+ 466:	88 3c       	cpi	r24, 0xC8	; 200
+ 468:	08 f0       	brcs	.+2      	; 0x46c <main+0x204>
+ 46a:	75 cf       	rjmp	.-278    	; 0x356 <main+0xee>
+ 46c:	80 91 03 02 	lds	r24, 0x0203
+ 470:	89 3c       	cpi	r24, 0xC9	; 201
+ 472:	08 f4       	brcc	.+2      	; 0x476 <main+0x20e>
+ 474:	70 cf       	rjmp	.-288    	; 0x356 <main+0xee>
+ 476:	80 91 02 02 	lds	r24, 0x0202
+ 47a:	88 3c       	cpi	r24, 0xC8	; 200
+ 47c:	08 f0       	brcs	.+2      	; 0x480 <main+0x218>
+ 47e:	6b cf       	rjmp	.-298    	; 0x356 <main+0xee>
+							{
+								forward();
+ 480:	0e 94 ad 00 	call	0x15a	; 0x15a <forward>
+ 484:	68 cf       	rjmp	.-304    	; 0x356 <main+0xee>
+							}
+						}							
+					 }	
+					 break;
+			case 'a':	forward();
+ 486:	0e 94 ad 00 	call	0x15a	; 0x15a <forward>
+						while(1)
+						{
+						 Left_white_line=ADC_Conversion(1);							
+ 48a:	81 e0       	ldi	r24, 0x01	; 1
+ 48c:	0e 94 12 01 	call	0x224	; 0x224 <ADC_Conversion>
+ 490:	80 93 04 02 	sts	0x0204, r24
+						 Center_white_line = ADC_Conversion(2);	//Getting data of Center WL Sensor
+ 494:	82 e0       	ldi	r24, 0x02	; 2
+ 496:	0e 94 12 01 	call	0x224	; 0x224 <ADC_Conversion>
+ 49a:	80 93 03 02 	sts	0x0203, r24
+						 Right_white_line = ADC_Conversion(3);	//Getting data of Right WL Sensor
+ 49e:	83 e0       	ldi	r24, 0x03	; 3
+ 4a0:	0e 94 12 01 	call	0x224	; 0x224 <ADC_Conversion>
+ 4a4:	80 93 02 02 	sts	0x0202, r24
+						 if(Left_white_line<200 && Right_white_line<200 && Center_white_line<200)
+ 4a8:	90 91 04 02 	lds	r25, 0x0204
+ 4ac:	98 3c       	cpi	r25, 0xC8	; 200
+ 4ae:	68 f7       	brcc	.-38     	; 0x48a <main+0x222>
+ 4b0:	88 3c       	cpi	r24, 0xC8	; 200
+ 4b2:	58 f7       	brcc	.-42     	; 0x48a <main+0x222>
+ 4b4:	80 91 03 02 	lds	r24, 0x0203
+ 4b8:	88 3c       	cpi	r24, 0xC8	; 200
+ 4ba:	38 f7       	brcc	.-50     	; 0x48a <main+0x222>
+						 {
+							stop();
+ 4bc:	0e 94 bc 00 	call	0x178	; 0x178 <stop>
+							break;							 
+						 }	
+						}
+						left();
+ 4c0:	0e 94 b0 00 	call	0x160	; 0x160 <left>
+						while(1)
+						{	
+						 Left_white_line = ADC_Conversion(1);	//Getting data of Left WL Sensor
+ 4c4:	81 e0       	ldi	r24, 0x01	; 1
+ 4c6:	0e 94 12 01 	call	0x224	; 0x224 <ADC_Conversion>
+ 4ca:	80 93 04 02 	sts	0x0204, r24
+						 Center_white_line = ADC_Conversion(2);	//Getting data of Center WL Sensor
+ 4ce:	82 e0       	ldi	r24, 0x02	; 2
+ 4d0:	0e 94 12 01 	call	0x224	; 0x224 <ADC_Conversion>
+ 4d4:	80 93 03 02 	sts	0x0203, r24
+						 Right_white_line = ADC_Conversion(3);	//Getting data of Right WL Sensor
+ 4d8:	83 e0       	ldi	r24, 0x03	; 3
+ 4da:	0e 94 12 01 	call	0x224	; 0x224 <ADC_Conversion>
+ 4de:	80 93 02 02 	sts	0x0202, r24
+							if(Center_white_line>200 && Left_white_line<200 && Right_white_line<200)
+ 4e2:	90 91 03 02 	lds	r25, 0x0203
+ 4e6:	99 3c       	cpi	r25, 0xC9	; 201
+ 4e8:	68 f3       	brcs	.-38     	; 0x4c4 <main+0x25c>
+ 4ea:	90 91 04 02 	lds	r25, 0x0204
+ 4ee:	98 3c       	cpi	r25, 0xC8	; 200
+ 4f0:	48 f7       	brcc	.-46     	; 0x4c4 <main+0x25c>
+ 4f2:	88 3c       	cpi	r24, 0xC8	; 200
+ 4f4:	38 f7       	brcc	.-50     	; 0x4c4 <main+0x25c>
+							{
+								stop();
+ 4f6:	0e 94 bc 00 	call	0x178	; 0x178 <stop>
+								uart_tx('o');
+ 4fa:	8f e6       	ldi	r24, 0x6F	; 111
+ 4fc:	0e 94 d7 00 	call	0x1ae	; 0x1ae <uart_tx>
+								break;
+							}								
+						}
+						break;										
+ 500:	b5 ce       	rjmp	.-662    	; 0x26c <main+0x4>
+			case 's':backward();
+ 502:	0e 94 aa 00 	call	0x154	; 0x154 <backward>
+					 while(1)
+					{
+						Left_white_line=ADC_Conversion(1);
+ 506:	81 e0       	ldi	r24, 0x01	; 1
+ 508:	0e 94 12 01 	call	0x224	; 0x224 <ADC_Conversion>
+ 50c:	80 93 04 02 	sts	0x0204, r24
+						Center_white_line = ADC_Conversion(2);	//Getting data of Center WL Sensor
+ 510:	82 e0       	ldi	r24, 0x02	; 2
+ 512:	0e 94 12 01 	call	0x224	; 0x224 <ADC_Conversion>
+ 516:	80 93 03 02 	sts	0x0203, r24
+						Right_white_line = ADC_Conversion(3);	//Getting data of Right WL Sensor
+ 51a:	83 e0       	ldi	r24, 0x03	; 3
+ 51c:	0e 94 12 01 	call	0x224	; 0x224 <ADC_Conversion>
+ 520:	80 93 02 02 	sts	0x0202, r24
+						if(Left_white_line>200 && Right_white_line>200 && Center_white_line>200)
+ 524:	90 91 04 02 	lds	r25, 0x0204
+ 528:	99 3c       	cpi	r25, 0xC9	; 201
+ 52a:	68 f3       	brcs	.-38     	; 0x506 <main+0x29e>
+ 52c:	89 3c       	cpi	r24, 0xC9	; 201
+ 52e:	58 f3       	brcs	.-42     	; 0x506 <main+0x29e>
+ 530:	80 91 03 02 	lds	r24, 0x0203
+ 534:	89 3c       	cpi	r24, 0xC9	; 201
+ 536:	38 f3       	brcs	.-50     	; 0x506 <main+0x29e>
+						{
+							stop();
+ 538:	0e 94 bc 00 	call	0x178	; 0x178 <stop>
+							break;
+						}
+					}
+					break;
+ 53c:	97 ce       	rjmp	.-722    	; 0x26c <main+0x4>
+			case 'f':forward();	
+ 53e:	0e 94 ad 00 	call	0x15a	; 0x15a <forward>
+					break;		
+ 542:	94 ce       	rjmp	.-728    	; 0x26c <main+0x4>
+			case 'd':forward();
+ 544:	0e 94 ad 00 	call	0x15a	; 0x15a <forward>
+					while(1)
+					{
+						Left_white_line=ADC_Conversion(1);
+ 548:	81 e0       	ldi	r24, 0x01	; 1
+ 54a:	0e 94 12 01 	call	0x224	; 0x224 <ADC_Conversion>
+ 54e:	80 93 04 02 	sts	0x0204, r24
+						Center_white_line = ADC_Conversion(2);	//Getting data of Center WL Sensor
+ 552:	82 e0       	ldi	r24, 0x02	; 2
+ 554:	0e 94 12 01 	call	0x224	; 0x224 <ADC_Conversion>
+ 558:	80 93 03 02 	sts	0x0203, r24
+						Right_white_line = ADC_Conversion(3);	//Getting data of Right WL Sensor
+ 55c:	83 e0       	ldi	r24, 0x03	; 3
+ 55e:	0e 94 12 01 	call	0x224	; 0x224 <ADC_Conversion>
+ 562:	80 93 02 02 	sts	0x0202, r24
+						if(Left_white_line<200 && Right_white_line<200 && Center_white_line<200)
+ 566:	90 91 04 02 	lds	r25, 0x0204
+ 56a:	98 3c       	cpi	r25, 0xC8	; 200
+ 56c:	68 f7       	brcc	.-38     	; 0x548 <main+0x2e0>
+ 56e:	88 3c       	cpi	r24, 0xC8	; 200
+ 570:	58 f7       	brcc	.-42     	; 0x548 <main+0x2e0>
+ 572:	80 91 03 02 	lds	r24, 0x0203
+ 576:	88 3c       	cpi	r24, 0xC8	; 200
+ 578:	38 f7       	brcc	.-50     	; 0x548 <main+0x2e0>
+						{
+							stop();
+ 57a:	0e 94 bc 00 	call	0x178	; 0x178 <stop>
+							break;
+						}
+					}
+					right();
+ 57e:	0e 94 b3 00 	call	0x166	; 0x166 <right>
+					while(1)
+					{
+						
+						 Left_white_line = ADC_Conversion(1);	//Getting data of Left WL Sensor
+ 582:	81 e0       	ldi	r24, 0x01	; 1
+ 584:	0e 94 12 01 	call	0x224	; 0x224 <ADC_Conversion>
+ 588:	80 93 04 02 	sts	0x0204, r24
+						 Center_white_line = ADC_Conversion(2);	//Getting data of Center WL Sensor
+ 58c:	82 e0       	ldi	r24, 0x02	; 2
+ 58e:	0e 94 12 01 	call	0x224	; 0x224 <ADC_Conversion>
+ 592:	80 93 03 02 	sts	0x0203, r24
+						 Right_white_line = ADC_Conversion(3);	//Getting data of Right WL Sensor
+ 596:	83 e0       	ldi	r24, 0x03	; 3
+ 598:	0e 94 12 01 	call	0x224	; 0x224 <ADC_Conversion>
+ 59c:	80 93 02 02 	sts	0x0202, r24
+						if(Center_white_line>200 && Left_white_line<200 && Right_white_line<200)
+ 5a0:	90 91 03 02 	lds	r25, 0x0203
+ 5a4:	99 3c       	cpi	r25, 0xC9	; 201
+ 5a6:	68 f3       	brcs	.-38     	; 0x582 <main+0x31a>
+ 5a8:	90 91 04 02 	lds	r25, 0x0204
+ 5ac:	98 3c       	cpi	r25, 0xC8	; 200
+ 5ae:	48 f7       	brcc	.-46     	; 0x582 <main+0x31a>
+ 5b0:	88 3c       	cpi	r24, 0xC8	; 200
+ 5b2:	38 f7       	brcc	.-50     	; 0x582 <main+0x31a>
+						{
+							stop();
+ 5b4:	0e 94 bc 00 	call	0x178	; 0x178 <stop>
+							uart_tx('o');
+ 5b8:	8f e6       	ldi	r24, 0x6F	; 111
+ 5ba:	0e 94 d7 00 	call	0x1ae	; 0x1ae <uart_tx>
+							break;
+						}
+					}
+					break;
+ 5be:	56 ce       	rjmp	.-852    	; 0x26c <main+0x4>
+			case 'r':right();
+ 5c0:	0e 94 b3 00 	call	0x166	; 0x166 <right>
+			while(1)
+			{
+				Left_white_line = ADC_Conversion(1);	//Getting data of Left WL Sensor
+ 5c4:	81 e0       	ldi	r24, 0x01	; 1
+ 5c6:	0e 94 12 01 	call	0x224	; 0x224 <ADC_Conversion>
+ 5ca:	80 93 04 02 	sts	0x0204, r24
+				Center_white_line = ADC_Conversion(2);	//Getting data of Center WL Sensor
+ 5ce:	82 e0       	ldi	r24, 0x02	; 2
+ 5d0:	0e 94 12 01 	call	0x224	; 0x224 <ADC_Conversion>
+ 5d4:	80 93 03 02 	sts	0x0203, r24
+				Right_white_line = ADC_Conversion(3);	//Getting data of Right WL Sensor
+ 5d8:	83 e0       	ldi	r24, 0x03	; 3
+ 5da:	0e 94 12 01 	call	0x224	; 0x224 <ADC_Conversion>
+ 5de:	80 93 02 02 	sts	0x0202, r24
+				if(Left_white_line<200 && Center_white_line<200 && Right_white_line<200)
+ 5e2:	90 91 04 02 	lds	r25, 0x0204
+ 5e6:	98 3c       	cpi	r25, 0xC8	; 200
+ 5e8:	68 f7       	brcc	.-38     	; 0x5c4 <main+0x35c>
+ 5ea:	90 91 03 02 	lds	r25, 0x0203
+ 5ee:	98 3c       	cpi	r25, 0xC8	; 200
+ 5f0:	48 f7       	brcc	.-46     	; 0x5c4 <main+0x35c>
+ 5f2:	88 3c       	cpi	r24, 0xC8	; 200
+ 5f4:	38 f7       	brcc	.-50     	; 0x5c4 <main+0x35c>
+				{
+					stop();
+ 5f6:	0e 94 bc 00 	call	0x178	; 0x178 <stop>
+					break;
+				}
+			}
+			break;
+ 5fa:	38 ce       	rjmp	.-912    	; 0x26c <main+0x4>
+			default: stop();	
+ 5fc:	0e 94 bc 00 	call	0x178	; 0x178 <stop>
+ 600:	35 ce       	rjmp	.-918    	; 0x26c <main+0x4>
+
+00000602 <_exit>:
+ 602:	f8 94       	cli
+
+00000604 <__stop_program>:
+ 604:	ff cf       	rjmp	.-2      	; 0x604 <__stop_program>
