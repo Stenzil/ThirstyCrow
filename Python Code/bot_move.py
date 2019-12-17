@@ -3,7 +3,7 @@
 """
 * Team Id: 100
 * Author List:Praveen Pandey, Abhishek Goel
-* Filename: lund.py
+* Filename: bot_move.py
 * Theme: Thirsty Crow
 * Functions: av,stepcount,move,movethebot,stepcount1,compass,getdirections,savepositions,
             finalmove,run1,extract,clearBuffer,bhago,bhagna,mad,rvrt
